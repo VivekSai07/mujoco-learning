@@ -1,9 +1,8 @@
 import mujoco
-import numpy as np
+import numpy as np 
 import mujoco.viewer
 
-# model_path = r"C:/Users/Vivek Sai/Downloads/Mujoco/mujoco_menagerie/franka_fr3/scene.xml"
-model_path = r"C:/Users/Vivek Sai/Downloads/Mujoco/mujoco_menagerie/franka_fr3/fr3.xml"
+model_path = r"C:/Users/Vivek Sai/Downloads/Mujoco/mujoco_menagerie/boston_dynamics_spot/scene.xml"
 
 model = mujoco.MjModel.from_xml_path(model_path)
 data = mujoco.MjData(model)

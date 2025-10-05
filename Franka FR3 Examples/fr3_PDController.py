@@ -17,11 +17,11 @@ target_qpos = np.array([0, -0.785, 0, -2.356, 0, 1.571, 0.785])
 target_qvel = np.zeros(7) 
 
 # Proportional gain (Kp) - for position error
-kp = 100.0
+kp = 800.0
 
 # Derivative gain (Kd) - for velocity error (damping)
 # This value helps to reduce oscillations. Start with a value and tune it.
-kd = 5.0
+kd = 113.1
 
 # --- Simulation Loop ---
 
@@ -29,7 +29,7 @@ print("Running Example 2: PD Joint Control")
 
 with mujoco.viewer.launch_passive(model, data) as viewer:
   start_time = time.time()
-  while viewer.is_running() and time.time() - start_time < 10:
+  while viewer.is_running() and time.time() - start_time < 15:
     step_start = time.time()
 
     # --- PD Controller Logic ---
